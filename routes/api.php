@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\PocketController;
+use \App\Http\Controllers\ContentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,5 @@ use \App\Http\Controllers\PocketController;
 
 Route::prefix('v1')->group(function () {
     Route::apiResource('pockets', PocketController::class);
+    Route::apiResource('pockets.contents', ContentController::class)->shallow();
 });

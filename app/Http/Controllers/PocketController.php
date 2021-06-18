@@ -20,9 +20,10 @@ class PocketController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store new pocket data
      *
-     * @param  PacketRequest  $request
+     * @param PacketRequest $request
+     * 
      * @return \Illuminate\Http\Response
      */
     public function store(PacketRequest $request)

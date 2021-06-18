@@ -3,11 +3,8 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\ApiRequest;
-use Illuminate\Contracts\Validation\Validator;
-use Illuminate\Http\Exceptions\HttpResponseException;
 
-
-class PacketRequest extends ApiRequest
+class ContentRequest extends ApiRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,8 +23,9 @@ class PacketRequest extends ApiRequest
      */
     public function rules()
     {
+        $urlCheckRegex = '/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/';
         return [
-            'title' => 'required|max:255'
+            'url' => "required|regex:$urlCheckRegex"
         ];
     }
 }
