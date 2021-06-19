@@ -9,9 +9,6 @@ $(".view-contents").click(function() {
 
     $.ajax({
         type: "GET",
-        accepts: {
-            text: "application/json"
-        },
         url: '/api/v1/pockets/' + pocketId + '/contents/',
         success: function(data) {
             generateContentCard(data.data);
@@ -26,11 +23,14 @@ $(".view-contents").click(function() {
 function generateContentCard(data) {
     var div = '';
     data.forEach(function(element) {
+        var imageUrl = element.image_url ? element.image_url : '/assets/images/default.jpg';
+        var excerpt = element.excerpt ? '<p class="content-excerpt">' + element.excerpt + '</p>' : '';
         div += '<div class="col-sm-6">' +
-            '<div class="card">' +
-            '<img class="card-img-top content-img" src="/assets/images/default.jpg" alt="Card image cap">' +
+            '<div class="card mb-10">' +
+            '<img class="card-img-top content-img" src="' + imageUrl + '" alt="Card image cap">' +
             '<div class="card-body">' +
-            '<h5 class="card-title">URL: <a href="' + element.url + '">' + element.url + '</a></h5>' +
+            '<h5 class="card-title"><a href="' + element.url + '">' + (element.title ? element.title : element.url) + '</a></h5>' +
+            excerpt +
             '<table class="fs-14 mb-10">' +
             '<tr>' +
             '<td>' +

@@ -18,7 +18,7 @@ Pockets
                 <table class="fs-14 mb-10">
                     <tr>
                         <td>
-                            <p class="card-text">Total {{ $contentCount > 1 ? 'Contents' : 'Content'}}</p>
+                            <p class="card-text bold">Total {{ $contentCount > 1 ? 'Contents' : 'Content'}}</p>
                         </td>
                         <td>
                             :
@@ -29,7 +29,7 @@ Pockets
                     </tr>
                     <tr>
                         <td>
-                            <p class="card-text">Created At</p>
+                            <p class="card-text bold">Created At</p>
                         </td>
                         <td>
                             :
@@ -40,7 +40,7 @@ Pockets
                     </tr>
                     <tr>
                         <td>
-                            <p class="card-text">Last Updated At</p>
+                            <p class="card-text bold">Last Updated At</p>
                         </td>
                         <td>
                             :

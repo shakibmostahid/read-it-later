@@ -21,3 +21,12 @@
 .error {
     color: red;
 }
+
+.content-excerpt {
+    text-align: justify;
+    font-weight: bold;
+}
+
+.bold {
+    font-weight: bold;
+}
