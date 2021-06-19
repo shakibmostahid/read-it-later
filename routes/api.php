@@ -17,6 +17,6 @@ use \App\Http\Controllers\ContentController;
 */
 
 Route::prefix('v1')->group(function () {
-    Route::apiResource('pockets', PocketController::class);
-    Route::apiResource('pockets.contents', ContentController::class)->shallow();
+    Route::apiResource('pockets', PocketController::class)->only('store');
+    Route::apiResource('pockets.contents', ContentController::class)->shallow()->except(['update', 'show']);
 });
