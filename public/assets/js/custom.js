@@ -30,7 +30,7 @@ function generateContentCard(data) {
             '<div class="card">' +
             '<img class="card-img-top content-img" src="/assets/images/default.jpg" alt="Card image cap">' +
             '<div class="card-body">' +
-            '<h5 class="card-title">URL: <a href="' + addHttpProtocol(element.url) + '">' + element.url + '</a></h5>' +
+            '<h5 class="card-title">URL: <a href="' + element.url + '">' + element.url + '</a></h5>' +
             '<table class="fs-14 mb-10">' +
             '<tr>' +
             '<td>' +
@@ -63,11 +63,4 @@ function generateContentCard(data) {
         div = '<h3 class="text-center">No contents available for this pocket!</h3>';
     }
     $("#contentDiv").html(div);
-}
-
-function addHttpProtocol(url) {
-    if (url.indexOf("http://") != 0 && url.indexOf("https://") != 0) {
-        url = 'http://' + url;
-    }
-    return url;
 }

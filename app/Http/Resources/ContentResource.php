@@ -18,6 +18,9 @@ class ContentResource extends JsonResource
             'id' => $this->id,
             'url' => $this->url,
             'pocket_id' => $this->pocket_id,
+            'title' => $this->title,
+            'excerpt' => $this->excerpt,
+            'image_url' => $this->image_url,
             'created_at' => $this->created_at->format('d-m-Y H:i:s (T)'),
             'updated_at' => $this->updated_at->format('d-m-Y H:i:s (T)')
         ];
