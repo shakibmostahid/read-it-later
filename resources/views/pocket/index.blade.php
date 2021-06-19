@@ -57,7 +57,7 @@ Pockets
         </div>
     </div>
     @empty
-    <h3>No pockets available!</h3>
+    <h3 class="text-center">No pockets available!</h3>
     @endforelse
 </div>
 @include('pocket._contentModal')
