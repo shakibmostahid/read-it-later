@@ -12,7 +12,7 @@ To get a local copy up and running follow these simple example steps.
 ### Installation
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/your_username_/read-it-later.git
    ```
 2. Install Composer packages
    ```sh
@@ -48,12 +48,18 @@ To get a local copy up and running follow these simple example steps.
 
 ### APIs
 * To create a Pocket
+    
     `POST` **/api/v1/pockets**
+    
     **Request Body**: *{"title": "Pocket 1"}*
 * To store a content in the pocket
+    
     `POST` **/api/v1/pockets/{id}/contents**
+    
     **Request Body**: *{"url": "valid-url-only"}*
 * To view all contents in one pocket
+    
     `GET` **/api/v1/pockets/{id}/contents**
 * To delete one stored content url
+    
     `DELETE` **/api/v1/contents/{id}**
